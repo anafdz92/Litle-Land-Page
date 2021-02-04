@@ -1,0 +1,87 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: $font-primary;
+}
+.menuContainer {
+  @include for-mobile {
+    width: 100%;
+  }
+}
+
+.menu {
+  margin-top: 70px;
+  display: flex;
+  list-style: none;
+  @include for-mobile {
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  &__btn {
+    font-family: $font-primary;
+    font-weight: bold;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border: 1px solid $color-primary;
+    transition: all 0.2s ease-in-out;
+    @include for-mobile {
+      min-width: 100vh;
+      border-right: 0px;
+      border-left: 0px;
+      padding-left: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-right: 20px;
+    }
+    &--box {
+      display: flex;
+
+      & .icon {
+        margin-left: auto;
+      }
+    }
+  }
+
+  &__btn:nth-child(2) {
+    border-right: none;
+    border-left: none;
+    @include for-mobile {
+      border: 0px;
+    }
+  }
+
+  &__btn:nth-child(1) {
+    @include for-mobile {
+      border-top: 0px;
+    }
+  }
+
+  &__btn:hover,
+  &__btn:focus {
+    background-color: $color-primary;
+    color: $color-secondary;
+    text-decoration: none;
+    cursor: pointer;
+    transform: scale(1);
+    @include for-mobile {
+      background-color: $color-secondary;
+      color: $color-primary;
+      cursor: pointer;
+    }
+  }
+}
+
+.main {
+  max-width: 700px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
