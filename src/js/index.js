@@ -88,7 +88,7 @@ function handleClick(ev) {
     }
     else if(screen.width>768) {
         
-        icon.classList.add('.js__none');
+        //icon.classList.add('.js__none');
         
         if (currentTargetId == "1"){
             textForPC.innerHTML=`<p class="js__textSection js__fade-in ">${guideTextContent}</p>`;
